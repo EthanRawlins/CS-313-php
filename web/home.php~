@@ -9,7 +9,7 @@
 <h1>Ethan Rawlins</h1>
 <p>Ethan Rawlins is from <b>Virginia</b> and is studying with a <u>Software Engineering</u> major.</p>
 <div id="center_link">
-   <button class="button" onclick="window.location.href='index.html'">
+   <button class="button" onclick="window.location.href='/~ethanrawlins/index.html'">
    <span>CS 213 Assignments</span>
    </button>
 </div>
