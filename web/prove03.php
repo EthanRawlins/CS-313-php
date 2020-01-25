@@ -1,6 +1,6 @@
 <?php
 session_start();
-$connect = mysqli_connect("localhost", "root", "", "testing");
+$connect = mysqli_connect("localhost", "root", "", "test");
 
 if(isset($__POST["add_to_cart"]))
 {
@@ -64,10 +64,9 @@ if(isset($_GET["action"]))
       <br />
       <div class="container">
          <br />
-         <br />
-         <br />
-
-	<h3 align="center">Shopping Cart</h3><br />
+         <div class="container" style="width:700px;">
+	    <h3 align="center">Shopping Cart</h3><br />
+         </div>
 	<br /><br />
 	<?php
 	   $query = "SELECT * FROM tbl_product ORDER BY id ASC";
@@ -75,7 +74,7 @@ if(isset($_GET["action"]))
 	   if(mysqli_num_rows($result) > 0)
 	   {
 	      while($row = mysqli_fetch_array($result))
-	   {
+	      {
 	?>
 	<div class="col-md-4">
 	   <form method="post" action="index.php?action=add&id=<?php echo $row["id"]; ?>">
