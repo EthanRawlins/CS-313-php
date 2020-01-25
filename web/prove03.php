@@ -67,7 +67,7 @@ if(isset($_GET["action"]))
          <br />
          <br />
 
-	<h3 align="center">Tutorial - <a href="http://www.webslesson.info/2016/08/simple-php-mysql-shopping-cart.html" title="Simple PHP Mysql Shopping Cart">Simple PHP Mysql Shopping Cart</a></h3><br />
+	<h3 align="center">Shopping Cart</h3><br />
 	<br /><br />
 	<?php
 	   $query = "SELECT * FROM tbl_product ORDER BY id ASC";
