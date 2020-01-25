@@ -1,0 +1,22 @@
+header {
+   background-color: darkred;
+   color: white;
+   text-align: center; 
+}
+body {
+   background-color: #FFFCF7;
+   color: black
+   text-align: center;
+}
+h2 {
+   text-align: center;
+}
+.centerButton {
+   background-color: darkred;
+}
+form {
+   background-color: #F4D5CF;
+   margin-left: auto;
+   margin-right: auto;
+   width: 60%;
+}
