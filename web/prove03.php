@@ -2,7 +2,7 @@
 session_start();
 $connect = mysqli_connect("localhost", "root", "", "testing");
 
-if(isset($__POST["add_tp_cart"]))
+if(isset($__POST["add_to_cart"]))
 {
    if(isset($_SESSION["shopping_cart"]))
    {
