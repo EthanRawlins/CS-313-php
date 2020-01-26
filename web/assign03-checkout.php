@@ -18,7 +18,7 @@ session_start();
          <header>
             <h1>Checkout</h1>
          </header>
-            <a href"assign03-browse.php">Back to Browse</a>
+            <a href="assign03-browse.php">Back to Browse</a>
          <form name="form1" action="assign03.php" method="get" onsubmit="checkphone(document.form1.phone)">
             First Name 
             <input id="firstName" type="text" size="10" maxlength="15" value="" name="first" required>
