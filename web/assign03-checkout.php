@@ -18,7 +18,7 @@ session_start();
          <header>
             <h1>Checkout</h1>
          </header>
-            <button class="button" onclick="windows.location.href = 'assign03-browse.php';">Back to Browse</button>
+            <a href"assign03-browse.php">Back to Browse</a>
          <form name="form1" action="assign03.php" method="get" onsubmit="checkphone(document.form1.phone)">
             First Name 
             <input id="firstName" type="text" size="10" maxlength="15" value="" name="first" required>
@@ -132,7 +132,7 @@ session_start();
             <input type="submit" onclick="validate()">
             <button class="button" type="reset" onclick="firstNameFocus()">Clear Form</button>
          </form>
-            <button class="button" onclick="windows.location.href = 'assign03-browse.php';">Back to Browse</button>
+            <a href="assign03-browse.php">Back to Browse</a>
 
       </body>
 </html>
