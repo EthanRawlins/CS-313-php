@@ -127,6 +127,7 @@
 
             <input type="submit" onclick="validate()">
             <button class="button" type="reset" onclick="firstNameFocus()">Clear Form</button>
+            <button class="button" href="assign03-browse.php">Back to Browse</button>
          </form>
 
       </body>
