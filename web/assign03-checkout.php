@@ -44,7 +44,7 @@
                   <td>Pen Usb</td>
                   <td>$19.99</td>
                   <?php
-                  if (!empty($_POST['checkbox']))
+                  if (!empty($_POST['penbuy']))
                   {
                   echo '<td><input type="checkbox" id="penbuy" name="item" value="19.99" onclick="calculateTotal()"></td>';
                   }
