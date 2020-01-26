@@ -43,8 +43,15 @@
                   <td><img src="pen-usb.jpg" alt="pen usb drive" width="100" height="100">
                   <td>Pen Usb</td>
                   <td>$19.99</td>
+                  if (!empty($_POST['checkbox']))
+                  {
                   <td><input type="checkbox" id="penbuy" name="item" value="19.99" onclick="calculateTotal()"></td>
-               </tr>
+                  }
+                  else
+                  {
+                  <td><input type="checkbox" id="penbuy" name="item" value="19.99" onclick="calculateTotal()" checked></td>
+                  }
+</tr>
                <tr>
                   <td><img src="lightsaber-knife.jpg" alt="lightsaber knife" width="100" height="100">
                   <td>Lightsaber Knife</td>
