@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -15,6 +18,7 @@
          <header>
             <h1>Checkout</h1>
          </header>
+            <button class="button" href="assign03-browse.php">Back to Browse</button>
          <form name="form1" action="assign03.php" method="get" onsubmit="checkphone(document.form1.phone)">
             First Name 
             <input id="firstName" type="text" size="10" maxlength="15" value="" name="first" required>
@@ -127,8 +131,8 @@
 
             <input type="submit" onclick="validate()">
             <button class="button" type="reset" onclick="firstNameFocus()">Clear Form</button>
-            <button class="button" href="assign03-browse.php">Back to Browse</button>
          </form>
+            <button class="button" href="assign03-browse.php">Back to Browse</button>
 
       </body>
 </html>
