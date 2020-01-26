@@ -108,7 +108,7 @@ session_start();
             </div>
             <br> <br>
 
-            <input type="submit" onclick="validate()">
+            <input type="submit" onclick="validate()" value="View Cart">
          </form>
 
       </body>
