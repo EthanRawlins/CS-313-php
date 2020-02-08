@@ -42,12 +42,14 @@
          <h1>Nameless Shoe Store</h1>
       </header>
       <h2>All Products</h2>
+      <br>
       <form action="prove5Search.php" method="POST">
-         <div align="center">
-            <input name="search" type="text">
+         <div align="right">
+            <input name="search" type="text" placeholder="Enter Product Name">
             <input type="submit" name="submit" value="Search">
          </div>
       </form>
+      <br>
       <table>
          <tr>
             <th>Price</th>
