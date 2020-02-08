@@ -27,9 +27,9 @@
 
 foreach ($db->query('SELECT * FROM item') as $row)
 {
-   echo $row[3];
-   echo ' ' . $row[4] . '<br>';
-   echo ' $' . $row[2] . '<br><br>';
+   echo '$' . $row[2];
+   echo ' ' . $row[3];
+   echo ' $' . $row[4] . '<br><br>';
 }
 ?>
 
