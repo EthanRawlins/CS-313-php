@@ -43,7 +43,7 @@
       </header>
       <h2>All Products</h2>
       <form action="prove5Search.php" method="POST">
-         <input name="search" type="text">
+         <input name="search" type="text" align="center">
          <input type="submit" name="submit" value="Search">
       </form>
       <table>
