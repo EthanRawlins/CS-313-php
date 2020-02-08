@@ -63,11 +63,11 @@
          <div align="center">
             <p>
                <form action='prove5Filter.php' method='POST'>
-                  <button type='submit' id='filter' name='filter' value='<?php print "$query" ?>'>
+                  <button type='submit' id='filter' name='filter' <?php print "value='$query'"?> >
                      Filter
                   </button>
                </form>
-            </p>";
+            </p>
          </div>
       <br>
       <table>
