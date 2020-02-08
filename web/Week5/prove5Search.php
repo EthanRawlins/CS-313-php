@@ -1,9 +1,13 @@
 <?php
    session_start();
-
+   $query;
    $search;
    if(isset($_POST["search"])){
       $search = $_POST["search"];
+      $query = "SELECT * FROM item WHERE item_name LIKE '%$search%'";
+   }
+   else {
+      $query = "SELECT * FROM item";
    }
 
    $dbUrl = getenv('DATABASE_URL');
@@ -29,8 +33,6 @@
       print "<p>error: $ex->getMessage() </p>\n\n";
       die();
    }
-   $query;
-   $query = "SELECT * FROM item WHERE item_name LIKE '%$search%'";
 ?>
 
 <!DOCTYPE HTML>
