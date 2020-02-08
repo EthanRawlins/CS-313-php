@@ -30,7 +30,7 @@
       die();
    }
    $query;
-   $query = "SELECT * FROM scripture WHERE item_name LIKE '$search'";
+   $query = "SELECT * FROM scripture WHERE item_name LIKE '$search';";
 ?>
 
 <!DOCTYPE HTML>

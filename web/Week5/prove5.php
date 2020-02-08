@@ -23,7 +23,9 @@
       print "<p>error: $ex->getMessage() </p>\n\n";
       die();
    }
-
+   
+   $query;
+   $query = "SELECT * FROM item;";
 ?>
 
 <!DOCTYPE HTML>
