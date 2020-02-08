@@ -42,17 +42,21 @@
          <h1>Nameless Shoe Store</h1>
       </header>
       <h2>All Products</h2>
+      <form action="prove5Search.php" method="POST">
+         <input name="search" type="text">
+         <input type="submit" name="submit" value="Search">
+      </form>
       <table>
          <tr>
             <th>Price</th>
-            <th>Brand</th>
             <th>Name</th>
+            <th>Brand</th>
             <th>Description</th>
          </tr>
       <?php
          foreach ($db->query('SELECT * FROM item') as $row)
          {
-            print "<tr><td>$" . $row[2] . "</td><td>" . $row[3] . "</td><td>" . $row[4] . "</td><td>" . $row[5] . "</td></tr>";
+            print "<tr><td>$" . $row[2] . "</td><td>" . $row[4] . "</td><td>" . $row[3] . "</td><td>" . $row[5] . "</td></tr>";
          }
       ?>
       </table>
