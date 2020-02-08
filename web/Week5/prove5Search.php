@@ -32,7 +32,7 @@
       }
    }
 
-/*   else if(isset($_POST["type1"])){
+   else if(isset($_POST["type1"])){
       $query = "SELECT * FROM item WHERE item_type IN (" . $_POST["type1"];
       if(isset($_POST["type2"])){
          $query .= ", " . $_POST["type2"];
@@ -52,7 +52,7 @@
          }
       }
       $query .= ")";
-   }*/
+   }
    else{
       $query = "SELECT * FROM item";
    }
