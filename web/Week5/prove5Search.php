@@ -68,7 +68,7 @@
                   cursor: pointer;
                   font-size: 1em;
                   font-family: serif;'
-                  id='filter' name='filter' value='$query'>Filter</button></p></form>";
+                  id='filter' name='filter' value='$query'>Filter</button></form></p>";
             ?>
          </div>
       <br>
