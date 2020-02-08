@@ -46,13 +46,23 @@
             $query .= ", " . $_POST["type3"];
          }
       }
-      else {
-         if(isset($_POST["type3"])){
-            $query .= "SELECT * FROM item WHERE item_type IN (" . $_POST["type3"];
-         }
+      else if(isset($_POST["type3"])){
+         $query .= "SELECT * FROM item WHERE item_type IN (" . $_POST["type3"];
       }
       $query .= ")";
    }
+
+   else if(isset($_POST["type2"])){
+      $query = "SELECT * FROM item WHERE item_type IN (" . $_POST["type2"];
+      if(isset($_POST["type3"])){
+         $query .= ", " . $_POST["type3"];
+      }
+      $query .= ")";
+
+   else if(isset($_POST["type3"])){
+      $query = "SELECT * FROM item WHERE item_type IN (" . $_POST["type3"];
+   }
+
    else{
       $query = "SELECT * FROM item";
    }
