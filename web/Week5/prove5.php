@@ -27,9 +27,9 @@
 
 foreach ($db->query('SELECT * FROM item') as $row)
 {
-   echo 'item id: ' . $row['item_id'];
-   echo ', item type: ' . $row['item_type'];
-   echo ', item price: ' . $row['item_price'];
+   echo 'item id: ' . $row[0];
+   echo ', item type: ' . $row[1];
+   echo ', item price: $' . $row['item_price'];
    echo ', item brand: ' . $row['item_brand'];
    echo ', item name: ' . $row['item_name'];
    echo ', added by: ' . $row['added_by'] . '<br>';
