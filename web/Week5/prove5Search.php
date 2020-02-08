@@ -28,14 +28,13 @@
    }
    else if(isset($_POST["type1"])){
       $query = "SELECT * FROM item WHERE item_type IN (" . $_POST["type1"];
-         if(isset($_POST["type2"])){
-            $query .= ", " . $_POST["type2"];
-         }
-         if(isset($_POST["type3"])){
-            $query .= ", " . $_POST["type3"];
-         }
-         $query .= ")";
+      if(isset($_POST["type2"])){
+         $query .= ", " . $_POST["type2"];
       }
+      if(isset($_POST["type3"])){
+         $query .= ", " . $_POST["type3"];
+      }
+      $query .= ")";
       else if(isset($_POST["type2"])){
          $query .= " AND item_type IN (" . $_POST["type"];
          if(isset($_POST["type3"])){
