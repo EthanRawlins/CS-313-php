@@ -63,7 +63,7 @@
          <div align="center">
             <?php
                print "<p><form action='prove5Filter.php' method='POST'>
-                  <button type='submit' style='background: none;
+                  <button type='submit' formmethod='post' style='background: none;
                   border: none;
                   color: blue;
                   text-decoration: underline;
