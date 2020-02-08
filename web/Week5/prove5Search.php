@@ -52,7 +52,10 @@
       <?php
          foreach ($db->query('SELECT * FROM item') as $row)
          {
-            print "<tr><td>$" . $row[2] . "</td><td>" . $row[3] . "</td><td>" . $row[4] . "</td><td>" . $row[5] . "</td></tr>";
+            echo '<tr><td>$' . $row[2] . '</td>';
+            echo '<td>' . $row[3] . '</td>';
+            echo '<td>' . $row[4] . '</td>';
+            echo '<td>' . $row[5] . '</td></tr>';
          }
       ?>
       </table>
