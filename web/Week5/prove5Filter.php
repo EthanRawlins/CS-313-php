@@ -43,8 +43,12 @@
       </header>
       <h2>Filter Results</h2>
       <br>
+      <div align="center">
+         <a href="prove5Search.php">Back to Browse</a>
+      </div>
       <form action="prove5Search.php" method="POST">
-         <div align="center">
+         <div align="left">
+            Shoe Type: 
             <input type="checkbox" name="type1" value="Basketball">
             <label for="type1">Basketball</label><br>
             <input type="checkbox" name="type2" value="Running">
@@ -52,11 +56,11 @@
             <input type="checkbox" name="type1" value="Soccer">
             <label for="type3">Soccer</label><br>
          </div>
-         <button type="submit" name="filter" value="Submit"></button>
+         <button type="submit" name="filter" value="Submit">Submit</button>
       </form>
       <br>
-         <div>
-            <button href="prove5Search.php">Back to Browse</button>
+         <div align="center">
+            <a href="prove5Search.php">Back to Browse</a>
          </div>
       <br>
    </body>
