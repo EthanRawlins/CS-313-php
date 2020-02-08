@@ -60,16 +60,15 @@
       <form>
          <div align="center">
             <?php
-               print "<form action='prove5Filter.php' method='POST'>
-                  <button style='background: none;
+               print "<p><form action='prove5Filter.php' method='POST'>
+                  <button type='submit' style='background: none;
                   border: none;
                   color: blue;
                   text-decoration: underline;
                   cursor: pointer;
                   font-size: 1em;
                   font-family: serif;'
-                  id='filter' name='filter' value='$query'>Filter</button>
-               </form>";
+                  id='filter' name='filter' value='$query'>Filter</button></p></form>";
             ?>
          </div>
       <br>
