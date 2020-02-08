@@ -1,11 +1,5 @@
 <?php
    session_start();
-
-   $search;
-   if(isset($_POST["search"])){
-      $search = $_POST["search"];
-   }
-
    $dbUrl = getenv('DATABASE_URL');
 
    if (empty($dbUrl)) {
@@ -29,8 +23,7 @@
       print "<p>error: $ex->getMessage() </p>\n\n";
       die();
    }
-   
-   $query = "SELECT * FROM scripture WHERE item_name = '$search'";
+
 ?>
 
 <!DOCTYPE HTML>
@@ -48,33 +41,18 @@
       <header>
          <h1>Nameless Shoe Store</h1>
       </header>
-      <h2>All Products</h2>
+      <h2>Filter Results</h2>
       <br>
       <form action="prove5Search.php" method="POST">
          <div align="center">
-            <input name="search" type="text" placeholder="Enter Product Name">
             <input type="submit" name="searchSubmit" value="Search">
          </div>
       </form>
       <br>
       <form>
-         <div align="center">
-            <button href="prove5Filter.php">Filter</button>
+         <div>
+            <button href="prove5Search.php">Back to Browse</button>
          </div>
       <br>
-      <table>
-         <tr>
-            <th>Price</th>
-            <th>Name</th>
-            <th>Brand</th>
-            <th>Description</th>
-         </tr>
-      <?php
-         foreach ($db->query($query) as $row)
-         {
-            print "<tr><td>$" . $row[2] . "</td><td>" . $row[4] . "</td><td>" . $row[3] . "</td><td>" . $row[5] . "</td></tr>";
-         }
-      ?>
-      </table>
    </body>
 </html>

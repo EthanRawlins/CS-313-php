@@ -44,11 +44,16 @@
       <h2>All Products</h2>
       <br>
       <form action="prove5Search.php" method="POST">
-         <div align="right">
+         <div align="center">
             <input name="search" type="text" placeholder="Enter Product Name">
             <input type="submit" name="submit" value="Search">
          </div>
       </form>
+      <br>
+      <form>
+         <div align="center">
+            <button href="prove5Filter.php">Filter</button>
+         </div>
       <br>
       <table>
          <tr>
