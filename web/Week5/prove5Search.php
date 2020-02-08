@@ -39,7 +39,7 @@
          $query .= ", " . $_POST["type3"];
       }
       else if(isset($_POST["type2"])){
-         $query .= " AND item_type IN (" . $_POST["type"];
+         $query .= "SELECT * FROM item WHERE item_type IN (" . $_POST["type"];
          if(isset($_POST["type3"])){
             $query .= ", " . $_POST["type3"];
          }
@@ -47,7 +47,7 @@
       }
       else {
          if(isset($_POST["type3"])){
-            $query .= " AND item_type IN (" . $_POST["type3"];
+            $query .= "SELECT * FROM item WHERE item_type IN (" . $_POST["type3"];
          }
       }
       $query .= ")";
