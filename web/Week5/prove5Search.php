@@ -61,17 +61,13 @@
       <br>
       <form>
          <div align="center">
-            <?php
-               print "<p><form action='prove5Filter.php' method='POST'>
-                  <button type='submit' style='background: none;
-                  border: none;
-                  color: blue;
-                  text-decoration: underline;
-                  cursor: pointer;
-                  font-size: 1em;
-                  font-family: serif;'
-                  id='filter' name='$query' value='prove5filter.php'>Filter</button></form></p>";
-            ?>
+            <p>
+               <form action='prove5Filter.php' method='POST'>
+                  <button type='submit' id='filter' name='filter' value='<?phpprint "$query" ?>'>
+                     Filter
+                  </button>
+               </form>
+            </p>";
          </div>
       <br>
       <table>
