@@ -59,7 +59,18 @@
       <br>
       <form>
          <div align="center">
-            <a href="prove5Filter.php">Filter</a>
+            <?php
+               print "<form action='prove5Filter.php' method='POST'>
+                  <button style='background: none;
+                  border: none;
+                  color: blue;
+                  text-decoration: underline;
+                  cursor: pointer;
+                  font-size: 1em;
+                  font-family: serif;'
+                  id='filter' name='filter' value='$query'>Filter</button>
+               </form>";
+            ?>
          </div>
       <br>
       <table>
