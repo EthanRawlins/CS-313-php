@@ -32,7 +32,7 @@ foreach ($db->query('SELECT * FROM item') as $row)
    echo ', item price: ' . $row['item_price'];
    echo ', item brand: ' . $row['item_brand'];
    echo ', item name: ' . $row['item_name'];
-   echo ', added by: ' . $row['added_by'] . '\n';
+   echo ', added by: ' . $row['added_by'] . '<br>';
 }
 ?>
 
