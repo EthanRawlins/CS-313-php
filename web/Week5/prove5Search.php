@@ -29,7 +29,7 @@
       print "<p>error: $ex->getMessage() </p>\n\n";
       die();
    }
-   
+   $query;
    $query = "SELECT * FROM scripture WHERE item_name LIKE '$search'";
 ?>
 
