@@ -1,42 +1,29 @@
 <?php
-try
-{
-   $user = 'postgres';
-   $password = 'password';
-   $db = new PDO('pgsql:host=localhost;dbname=myTestDB', $user, $password);
-
-   // this line makes PDO give us an exception when there are problems,
-   // and can be very helpful in debugging! (But you would likely want
-   // to disable it for production environments.)
-   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $ex)
-{
-   echo 'Error!: ' . $ex->getMessage();
-   die();
-}
-
-try
-{
+   session_start();
+   print "<h1>Nameless Shoe Store</h1>";
    $dbUrl = getenv('DATABASE_URL');
 
-   $dbOpts = parse_url($dbUrl);
+   if (empty($dbUrl)) {
+      // example localhost configuration URL with postgres username and a database called cs313db
+      $dbUrl = "postgres://postgres:password@localhost:5432/cs313db";
+   }
+   $dbopts = parse_url($dbUrl);
 
-   $dbHost = $dbOpts["host"];
-   $dbPort = $dbOpts["port"];
-   $dbUser = $dbOpts["user"];
-   $dbPassword = $dbOpts["pass"];
-   $dbName = ltrim($dbOpts["path"],'/');
+   $dbHost = $dbopts["host"];
+   $dbPort = $dbopts["port"];
+   $dbUser = $dbopts["user"];
+   $dbPassword = $dbopts["pass"];
+   $dbName = ltrim($dbopts["path"], '/');
 
-   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+   //print "<p>pgsql:host=$dbHost;port=$dbPort;dbname=$dbName</p>\n\n";
 
-   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $ex)
-{
-   echo 'Error!: ' . $ex->getMessage();
-   die();
-}
+   try {
+      $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+   }
+   catch (PDOException $ex) {
+      print "<p>error: $ex->getMessage() </p>\n\n";
+      die();
+   }
 
 foreach ($db->query('SELECT * FROM item') as $row)
 {
@@ -48,3 +35,19 @@ foreach ($db->query('SELECT * FROM item') as $row)
    echo 'added by: ' . $row['added_by'];
 }
 ?>
+
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Nameless Shoe Store</title>
+<script>
+
+</script>
+</head>
+
+<body> <header>
+Search 
+</header>
+</body>
+</html>
