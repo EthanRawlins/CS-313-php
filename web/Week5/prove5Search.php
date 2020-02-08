@@ -61,7 +61,7 @@
    }
 
    else if(isset($_POST["type3"])){
-      $query = "SELECT * FROM item WHERE item_type IN (" . $_POST["type3"] . ")";
+      $query = "SELECT * FROM item WHERE item_type = " . $_POST["type3"];
    }
 
    else{
