@@ -128,16 +128,6 @@
          </div>
       </form>
       <br>
-         <div align="center">
-            <p>
-               <form action='prove5Filter.php' method='POST'>
-                  <button type='submit' id='filter' name='filter' <?php print "value='$query'"?> >
-                     Filter
-                  </button>
-               </form>
-            </p>
-         </div>
-      <br>
       <table>
          <tr>
             <th>Price</th>
