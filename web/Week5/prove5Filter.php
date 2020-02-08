@@ -45,11 +45,16 @@
       <br>
       <form action="prove5Search.php" method="POST">
          <div align="center">
-            <input type="submit" name="searchSubmit" value="Search">
+            <input type="checkbox" name="type1" value="Basketball">
+            <label for="type1">Basketball</label><br>
+            <input type="checkbox" name="type2" value="Running">
+            <label for="type2">Running</label><br>
+            <input type="checkbox" name="type1" value="Soccer">
+            <label for="type3">Soccer</label><br>
          </div>
+         <button type="submit" name="filter" value="Submit"></button>
       </form>
       <br>
-      <form>
          <div>
             <button href="prove5Search.php">Back to Browse</button>
          </div>
