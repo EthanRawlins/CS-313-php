@@ -30,7 +30,7 @@
       die();
    }
    
-   $query = "SELECT * FROM scripture WHERE item_name = '$search'";
+   $query = "SELECT * FROM scripture WHERE item_name = '$search%'";
 ?>
 
 <!DOCTYPE HTML>
