@@ -5,8 +5,21 @@
    if(isset($_POST["search"])){
       $search = $_POST["search"];
       $query = "SELECT * FROM item WHERE item_name LIKE '%$search%'";
+      if(isset($_POST["type1"])){
+         $query .= " AND item_type IN (" . $_POST["type1"];
+         if(isset($_POST["type2"])){
+            $query .= ", " . $_POST["type2"];
+         }
+         if(isset($_POST["type3"])){
+            $query .= ", " . $_POST["type3"];
+         }
+         $query .= ")";
+      }
    }
-   else {
+   else if(isset($_POST["filter"])){
+      $query = $_POST["filter"];
+   }
+   else{
       $query = "SELECT * FROM item";
    }
 
@@ -53,9 +66,19 @@
       <h2>All Products</h2>
       <br>
       <form action="prove5Search.php" method="POST">
-         <div align="center">
+         <div align="right">
             <input name="search" type="text" placeholder="Enter Product Name">
             <input type="submit" name="searchSubmit" value="Search">
+         </div>
+         <div align="left">
+            Shoe Type: 
+            <input type="checkbox" name="type1" value="1">
+            <label for="type1">Basketball</label><br>
+            <input type="checkbox" name="type2" value="2">
+            <label for="type2">Running</label><br>
+            <input type="checkbox" name="type1" value="3">
+            <label for="type3">Soccer</label><br>
+            <input type="submit" name="filterSubmit" value="Filter">
          </div>
       </form>
       <br>

@@ -2,11 +2,6 @@
    session_start();
    $dbUrl = getenv('DATABASE_URL');
 
-   $results;
-   if(isset($_POST["filter"])){
-      $results = $_POST["filter"];
-   }
-
    if (empty($dbUrl)) {
       // example localhost configuration URL with postgres username and a database called cs313db
       $dbUrl = "postgres://postgres:password@localhost:5432/cs313db";
@@ -61,7 +56,7 @@
             <input type="checkbox" name="type1" value="Soccer">
             <label for="type3">Soccer</label><br>
          </div>
-         <button type="submit" name="filter" value="Submit">Submit</button>
+         <button type="submit" name="filter">Submit</button>
       </form>
       <br>
          <div align="center">
