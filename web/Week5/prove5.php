@@ -25,7 +25,7 @@
    }
    
    $query;
-   $query = "SELECT * FROM item;";
+   $query = "SELECT * FROM item";
 ?>
 
 <!DOCTYPE HTML>
@@ -65,7 +65,7 @@
             <th>Description</th>
          </tr>
       <?php
-         foreach ($db->query('SELECT * FROM item') as $row)
+         foreach ($db->query($query) as $row)
          {
             print "<tr><td>$" . $row[2] . "</td><td>" . $row[4] . "</td><td>" . $row[3] . "</td><td>" . $row[5] . "</td></tr>";
          }
