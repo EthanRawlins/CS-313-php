@@ -54,7 +54,7 @@
       <br>
       <form>
          <div align="center">
-            <button href="prove5Filter.php">Filter</button>
+            <a href="prove5Filter.php">Filter</a>
          </div>
       <br>
       <table>
