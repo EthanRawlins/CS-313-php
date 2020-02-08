@@ -104,7 +104,7 @@
             <label for="type1">Basketball</label><br>
             <input type="checkbox" name="type2" value="2">
             <label for="type2">Running</label><br>
-            <input type="checkbox" name="type1" value="3">
+            <input type="checkbox" name="type3" value="3">
             <label for="type3">Soccer</label><br>
             <input type="submit" name="filterSubmit" value="Filter">
          </div>
