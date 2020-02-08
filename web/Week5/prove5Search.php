@@ -25,8 +25,10 @@
          }
          $query .= ")";
       }
-      else (isset($_POST["type3"])){
-         $query .= " AND item_type IN (" . $_POST["type3"];
+      else{
+         if(isset($_POST["type3"])){
+            $query .= " AND item_type IN (" . $_POST["type3"];
+         }
       }
    }
 
