@@ -1,5 +1,73 @@
 <?php
    session_start();
+
+   $query;
+   $search;
+   
+   if(isset($_POST["search"])){
+      $search = $_POST["search"];
+      $query = "SELECT * FROM item WHERE UPPER(item_name) LIKE UPPER('%$search%')";
+      if(isset($_POST["type1"])){
+         $query .= " AND item_type IN (" . $_POST["type1"];
+         if(isset($_POST["type2"])){
+            $query .= ", " . $_POST["type2"];
+         }
+         if(isset($_POST["type3"])){
+            $query .= ", " . $_POST["type3"];
+         }
+         $query .= ")";
+      }
+
+      else if(isset($_POST["type2"])){
+         $query .= " AND item_type IN (" . $_POST["type2"];
+         if(isset($_POST["type3"])){
+            $query .= ", " . $_POST["type3"];
+         }
+         $query .= ")";
+      }
+      else{
+         if(isset($_POST["type3"])){
+            $query .= " AND item_type IN (" . $_POST["type3"] . ")";
+         }
+      }
+   }
+
+   else if(isset($_POST["type1"])){
+      $query = "SELECT * FROM item WHERE item_type IN (" . $_POST["type1"];
+      if(isset($_POST["type2"])){
+         $query .= ", " . $_POST["type2"];
+      }
+      if(isset($_POST["type3"])){
+         $query .= ", " . $_POST["type3"];
+      }
+      else if(isset($_POST["type2"])){
+         $query .= "SELECT * FROM item WHERE item_type IN (" . $_POST["type2"];
+         if(isset($_POST["type3"])){
+            $query .= ", " . $_POST["type3"];
+         }
+      }
+      else if(isset($_POST["type3"])){
+         $query .= "SELECT * FROM item WHERE item_type IN (" . $_POST["type3"];
+      }
+      $query .= ")";
+   }
+
+   else if(isset($_POST["type2"])){
+      $query = "SELECT * FROM item WHERE item_type IN (" . $_POST["type2"];
+      if(isset($_POST["type3"])){
+         $query .= ", " . $_POST["type3"];
+      }
+      $query .= ")";
+   }
+
+   else if(isset($_POST["type3"])){
+      $query = "SELECT * FROM item WHERE item_type IN (" . $_POST["type3"] . ")";
+   }
+
+   else{
+      $query = "SELECT * FROM item";
+   }
+
    $dbUrl = getenv('DATABASE_URL');
 
    if (empty($dbUrl)) {
@@ -23,9 +91,6 @@
       print "<p>error: $ex->getMessage() </p>\n\n";
       die();
    }
-   
-   $query;
-   $query = "SELECT * FROM item";
 ?>
 
 <!DOCTYPE HTML>
@@ -48,13 +113,29 @@
       <form action="prove5Search.php" method="POST">
          <div align="center">
             <input name="search" type="text" placeholder="Enter Product Name">
-            <input type="submit" name="submit" value="Search">
+            <input type="submit" name="searchSubmit" value="Search">
+         </div>
+         <div align="left">
+            <h4>Filters</h4>
+            Shoe Type: <br> 
+            <input type="checkbox" name="type1" value="1">
+            <label for="type1">Basketball</label><br>
+            <input type="checkbox" name="type2" value="2">
+            <label for="type2">Running</label><br>
+            <input type="checkbox" name="type3" value="3">
+            <label for="type3">Soccer</label><br>
+            <input type="submit" name="filterSubmit" value="Filter">
          </div>
       </form>
       <br>
-      <form>
          <div align="center">
-            <a href="prove5Filter.php">Filter</a>
+            <p>
+               <form action='prove5Filter.php' method='POST'>
+                  <button type='submit' id='filter' name='filter' <?php print "value='$query'"?> >
+                     Filter
+                  </button>
+               </form>
+            </p>
          </div>
       <br>
       <table>
