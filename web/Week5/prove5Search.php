@@ -110,7 +110,7 @@
       </header>
       <h2>All Products</h2>
       <br>
-      <form action="prove5Search.php" method="POST">
+      <form method="POST">
          <div align="center">
             <input name="search" type="text" placeholder="Enter Product Name">
             <input type="submit" name="searchSubmit" value="Search">
