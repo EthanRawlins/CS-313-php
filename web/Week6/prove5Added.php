@@ -2,11 +2,8 @@
    session_start();
 
    $next_item_id;
-   $next_item_id = "NEXTVAL('item_item_id_seq')";
+   $next_item_id = "nextval('item_item_id_seq')";
    
-
-
-
    $item_type;
    if(isset($_POST["item_type"])){
       $item_type = $_POST["item_type"];
