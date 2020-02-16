@@ -93,6 +93,7 @@
             print "Item \"" . $row[0] . "\" added by admin.";
          }
       ?>
+      <br>
       <a href="prove5.php">Back to Browse</a>
       <br>
       <br>

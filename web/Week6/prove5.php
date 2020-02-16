@@ -111,6 +111,7 @@
       <h2>All Products</h2>
       <br>
       <a href="prove5Add.php">Add a new product</a>
+      <a href="prove5Delete.php">Remove a product</a>
       <form action="prove5Search.php" method="POST">
          <div align="center">
             <input name="search" type="text" placeholder="Enter Product Name">
@@ -127,21 +128,20 @@
             <label for="type3">Soccer</label><br>
             <input type="submit" name="filterSubmit" value="Filter">
          </div>
+         <br>
+         <table>
+            <tr>
+               <th>Price</th>
+               <th>Name</th>
+               <th>Brand</th>
+               <th>Description</th>
+            </tr>
+            <?php
+               foreach ($db->query($query) as $row)
+               {
+                  print "<tr><td>$" . $row[2] . "</td><td>" . $row[4] . "</td><td>" . $row[3] . "</td><td>" . $row[5] . "</td></tr>"
+            ?>
+         </table>
       </form>
-      <br>
-      <table>
-         <tr>
-            <th>Price</th>
-            <th>Name</th>
-            <th>Brand</th>
-            <th>Description</th>
-         </tr>
-      <?php
-         foreach ($db->query($query) as $row)
-         {
-            print "<tr><td>$" . $row[2] . "</td><td>" . $row[4] . "</td><td>" . $row[3] . "</td><td>" . $row[5] . "</td></tr>";
-         }
-      ?>
-      </table>
    </body>
 </html>
