@@ -62,13 +62,10 @@
 
    //Inserts
    $itemInsert;
-   $itemInsert = "INSERT INTO item (item_id, item_type, item_price, item_brand, item_name, item_desc, added_by) VALUES ('$item_id', '$item_type, '$item_price', '$item_brand', '$item_name', '$item_desc', '$added_by')";
+   $itemInsert = "INSERT INTO item (item_id, item_type, item_price, item_brand, item_name, item_desc, added_by) VALUES ('$item_id', '$item_type', '$item_price', '$item_brand', '$item_name', '$item_desc', '$added_by')";
 
    $stmt = $db->prepare($itemInsert);
    $stmt->execute();
-
-   $query;
-   $query = "SELECT item_name FROM item WHERE item_id='$item_id'";
 
 ?>
 
@@ -90,8 +87,10 @@
       <h2>Add A New Product</h2>
       <br>
       <?php
+         $query;
+         $query = "SELECT item_name FROM item WHERE item_id='$item_id'";
          foreach ($db->query($query) as $row){
-         print "Item \"" . $row . "\" added by admin.";
+            print "Item \"" . $row . "\" added by admin.";
          }
       ?>
       <a href="prove5.php">Back to Browse</a>
