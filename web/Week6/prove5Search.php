@@ -113,6 +113,7 @@
       <a href="prove5Add.php">Add a new product</a>
       <br>
       <a href="prove5Delete.php">Remove a product</a>
+      <br>
       <form method="POST">
          <div align="center">
             <input name="search" type="text" placeholder="Enter Product Name">

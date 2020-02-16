@@ -113,6 +113,7 @@
       <a href="prove5Add.php">Add a new product</a>
       <br>
       <a href="prove5Delete.php">Remove a product</a>
+      <br>
       <form action="prove5Search.php" method="POST">
          <div align="center">
             <input name="search" type="text" placeholder="Enter Product Name">
@@ -140,7 +141,8 @@
             <?php
                foreach ($db->query($query) as $row)
                {
-                  print "<tr><td>$" . $row[2] . "</td><td>" . $row[4] . "</td><td>" . $row[3] . "</td><td>" . $row[5] . "</td></tr>"
+                  print "<tr><td>$" . $row[2] . "</td><td>" . $row[4] . "</td><td>" . $row[3] . "</td><td>" . $row[5] . "</td></tr>";
+               }
             ?>
          </table>
       </form>
