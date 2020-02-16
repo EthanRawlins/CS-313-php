@@ -1,9 +1,6 @@
 <?php
    session_start();
 
-   $next_item_id;
-   $next_item_id = "nextval('item_item_id_seq')";
-   
    $item_type;
    if(isset($_POST["item_type"])){
       $item_type = $_POST["item_type"];
@@ -84,7 +81,7 @@
       <br>
       <?php
          $query;
-         $query = "SELECT last_value FROM item_item_id_seq";
+         $query = "SELECT item_name FROM item WHERE item_id = 'SELECT last_value FROM item_item_id_seq'";
          foreach ($db->query($query) as $row){
             print "Item \"" . $row[0] . "\" added by admin.";
          }
