@@ -2,11 +2,13 @@
    session_start();
 
    $next_item_id;
-   $next_item_id = "SELECT nextval('item_item_id_seq')";
+   $next_item_id = "SELECT NEXTVAL('item_item_id_seq')";
    
 print $next_item_id;
 
    $item_id = "SELECT last_value FROM item_item_id_seq";
+
+print $item_id;
 
    $item_type;
    if(isset($_POST["item_type"])){
