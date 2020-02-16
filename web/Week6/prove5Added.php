@@ -4,7 +4,6 @@
    $next_item_id;
    $next_item_id = "SELECT NEXTVAL('item_item_id_seq')";
    
-print $next_item_id . ";";
 
    $item_id = "SELECT last_value FROM item_item_id_seq";
 
@@ -68,6 +67,8 @@ print $item_id . ";";
 
    $stmt = $db->prepare($itemInsert);
    $stmt->execute();
+
+   print $db->query($item_id);
 
 ?>
 
