@@ -111,6 +111,7 @@
       <h2>All Products</h2>
       <br>
       <a href="prove5Add.php">Add a new product</a>
+      <br>
       <a href="prove5Delete.php">Remove a product</a>
       <form action="prove5Search.php" method="POST">
          <div align="center">
