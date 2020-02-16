@@ -34,7 +34,7 @@
    }
  
    $added_by;
-   $added_by = 1;
+   $added_by = "1";
 
    $dbUrl = getenv('DATABASE_URL');
 
