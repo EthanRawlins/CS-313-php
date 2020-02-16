@@ -90,7 +90,7 @@
          $query;
          $query = "SELECT item_name FROM item WHERE item_id='$item_id'";
          foreach ($db->query($query) as $row){
-            print "Item \"" . $row . "\" added by admin.";
+            print "Item \"" . $row[0] . "\" added by admin.";
          }
       ?>
       <a href="prove5.php">Back to Browse</a>
