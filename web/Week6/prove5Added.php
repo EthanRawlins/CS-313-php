@@ -4,6 +4,8 @@
    $next_item_id;
    $next_item_id = "SELECT nextval('item_item_id_seq')";
    
+print $next_item_id;
+
    $item_id = "SELECT last_value FROM item_item_id_seq";
 
    $item_type;
