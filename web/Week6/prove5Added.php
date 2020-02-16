@@ -61,10 +61,15 @@
    }
 
    //Inserts
-   $itemInsert = "INSERT INTO item (item_id, item_type, item_price, item_brand, item_name, item_desc, added_by) VALUES ('$item_id', '$item_type, '$item_price', '$item_brand', '$item_name', '$item_desc', '$added_by')";
+   $itemInsert;
+   $itemInsert = "INSERT INTO item (item_id, item_type, item_price, item_brand, item_name, item_desc, added_by) VALUES ('$item_id', '$item_type, '$item_price', '$item_brand', '$item_name', '$item_desc', '$added_by');";
 
    $stmt = $db->prepare($itemInsert);
    $stmt->execute();
+
+   $query;
+   $query = "SELECT * FROM item WHERE item_id='$item_id';";
+   print "$query";
 
 ?>
 
@@ -91,12 +96,19 @@
       <form action="prove5Added.php" method="POST">
          <div align="center">
             <input name="item_id" type="text" placeholder="Item ID">
+            <br>
             <input name="item_type" type="text" placeholder="Item Type">
+            <br>
             <input name="item_price" type="text" placeholder="Item Price">
+            <br>
             <input name="item_brand" type="text" placeholder="Item Brand">
+            <br>
             <input name="item_name" type="text" placeholder="Item Name">
+            <br>
             <input name="item_desc" type="text" placeholder="Item Description">
+            <br>
             <input name="added_by" type="text" placeholder="Added By...">
+            <br>
             <input type="submit" name="submit" value="Submit">
          </div>
       </form>
