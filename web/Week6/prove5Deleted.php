@@ -63,7 +63,7 @@
       <a href="prove5.php">Back to Browse</a>
       <br>
       <br>
-      <form action="prove5Delete.php" method="POST">
+      <form action="prove5Deleted.php" method="POST">
          <div align="center">
            <input name="item_name" type="text" placeholder="Item Name">
            <input type="submit" name="delete" value="Delete">
