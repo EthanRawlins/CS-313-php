@@ -68,8 +68,7 @@
    $stmt->execute();
 
    $query;
-   $query = "SELECT * FROM item WHERE item_id='$item_id';";
-   print "$query";
+   $query = "SELECT item_name FROM item WHERE item_id='$item_id'";
 
 ?>
 
@@ -90,6 +89,11 @@
       </header>
       <h2>Add A New Product</h2>
       <br>
+      <?php
+         foreach (db->query($query) as $row){
+         print "Item \"" . $row . "\" added by admin.";
+         }
+      ?>
       <a href="prove5.php">Back to Browse</a>
       <br>
       <br>
