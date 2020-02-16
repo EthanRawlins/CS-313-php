@@ -1,10 +1,11 @@
 <?php
    session_start();
 
-   $item_id;
-   if(isset($_POST["item_id"])){
-      $item_id = $_POST["item_id"];
-   }
+   $next_item_id;
+   $next_item_id = "SELECT nextval('item_item_id_seq')";
+   
+   $item_id = "SELECT currval('item_item_id_seq')";
+
    $item_type;
    if(isset($_POST["item_type"])){
       $item_type = $_POST["item_type"];
@@ -31,11 +32,8 @@
    }
  
    $added_by;
-   if(isset($_POST["added_by"])){
-      $added_by = $_POST["added_by"];
-   }
- 
-  
+   $added_by = 1;
+
    $dbUrl = getenv('DATABASE_URL');
 
    if (empty($dbUrl)) {
@@ -99,8 +97,6 @@
       <br>
       <form action="prove5Added.php" method="POST">
          <div align="center">
-            <input name="item_id" type="text" placeholder="Item ID">
-            <br>
             <input name="item_type" type="text" placeholder="Item Type">
             <br>
             <input name="item_price" type="text" placeholder="Item Price">
@@ -110,8 +106,6 @@
             <input name="item_name" type="text" placeholder="Item Name">
             <br>
             <input name="item_desc" type="text" placeholder="Item Description">
-            <br>
-            <input name="added_by" type="text" placeholder="Added By...">
             <br>
             <input type="submit" name="submit" value="Submit">
          </div>
