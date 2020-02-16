@@ -5,7 +5,6 @@
    $next_item_id = "NEXTVAL('item_item_id_seq')";
    
 
-   $item_id = "SELECT last_value FROM item_item_id_seq";
 
 
    $item_type;
@@ -34,7 +33,7 @@
    }
  
    $added_by;
-   $added_by = "1";
+   $added_by = 1;
 
    $dbUrl = getenv('DATABASE_URL');
 
@@ -88,7 +87,7 @@
       <br>
       <?php
          $query;
-         $query = "SELECT item_name FROM item WHERE item_id='$item_id'";
+         $query = "SELECT last_value FROM item_item_id_seq";
          foreach ($db->query($query) as $row){
             print "Item \"" . $row[0] . "\" added by admin.";
          }
