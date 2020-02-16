@@ -7,32 +7,32 @@
    }
    $item_type;
    if(isset($_POST["item_type"])){
-      $item_id = $_POST["item_type"];
+      $item_type = $_POST["item_type"];
    }
  
    $item_price;
    if(isset($_POST["item_price"])){
-      $item_id = $_POST["item_price"];
+      $item_price = $_POST["item_price"];
    }
  
    $item_brand;
    if(isset($_POST["item_brand"])){
-      $item_id = $_POST["item_brand"];
+      $item_brand = $_POST["item_brand"];
    }
  
    $item_name;
    if(isset($_POST["item_name"])){
-      $item_id = $_POST["item_name"];
+      $item_name = $_POST["item_name"];
    }
  
    $item_desc;
    if(isset($_POST["item_desc"])){
-      $item_id = $_POST["item_desc"];
+      $item_desc = $_POST["item_desc"];
    }
  
    $added_by;
    if(isset($_POST["added_by"])){
-      $item_id = $_POST["added_by"];
+      $added_by = $_POST["added_by"];
    }
  
   
