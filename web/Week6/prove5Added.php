@@ -4,7 +4,7 @@
    $next_item_id;
    $next_item_id = "SELECT nextval('item_item_id_seq')";
    
-   $item_id = "SELECT currval('item_item_id_seq')";
+   $item_id = "SELECT last_value FROM item_item_id_seq";
 
    $item_type;
    if(isset($_POST["item_type"])){
