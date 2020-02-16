@@ -62,7 +62,7 @@
 
    //Inserts
    $itemInsert;
-   $itemInsert = "INSERT INTO item (item_id, item_type, item_price, item_brand, item_name, item_desc, added_by) VALUES ('$item_id', '$item_type, '$item_price', '$item_brand', '$item_name', '$item_desc', '$added_by');";
+   $itemInsert = "INSERT INTO item (item_id, item_type, item_price, item_brand, item_name, item_desc, added_by) VALUES ('$item_id', '$item_type, '$item_price', '$item_brand', '$item_name', '$item_desc', '$added_by')";
 
    $stmt = $db->prepare($itemInsert);
    $stmt->execute();
@@ -90,7 +90,7 @@
       <h2>Add A New Product</h2>
       <br>
       <?php
-         foreach (db->query($query) as $row){
+         foreach ($db->query($query) as $row){
          print "Item \"" . $row . "\" added by admin.";
          }
       ?>
