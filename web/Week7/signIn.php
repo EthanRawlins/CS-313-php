@@ -83,7 +83,9 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
    <body>
       <header>
          <h1>Nameless Shoe Store</h1>
+         <br>
          <h2>Sign in</h2>
+         <br>
       </header>
 
 <body>
@@ -112,11 +114,12 @@ if ($badLogin)
 	<input type="submit" value="Sign In" />
 
       </form>
-   </div>
 
 <br /><br />
 
 Or <a href="signUp.php">Sign up</a> for a new account.
+
+</div>
 
 </div>
 
