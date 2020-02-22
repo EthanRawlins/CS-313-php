@@ -116,9 +116,9 @@
    <body>
       <header>
          <h1>Nameless Shoe Store</h1>
+      </header>
          <p>Welcome <?= $username?>, not you? Click </p>
          <a href="signIn.php">here</a>
-      </header>
       <br>
       <h2>All Products</h2>
       <br>
