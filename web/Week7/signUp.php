@@ -12,11 +12,23 @@
 ***********************************************************/
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Sign Up</title>
-</head>
+
+<!DOCTYPE HTML>
+<html lang="en-us">
+   <head>
+      <meta charset="utf-8">
+      <title>Nameless Shoe Store</title>
+      <link rel="stylesheet" type="text/css" href="prove5.css">
+      <script>
+
+      </script>
+   </head>
+
+   <body>
+      <header>
+         <h1>Nameless Shoe Store</h1>
+         <h2>Sign Up</h2>
+      </header>
 
 <body>
 <div>

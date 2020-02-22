@@ -68,11 +68,23 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 // should just see the login form.
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Sign In</title>
-</head>
+
+<!DOCTYPE HTML>
+<html lang="en-us">
+   <head>
+      <meta charset="utf-8">
+      <title>Nameless Shoe Store</title>
+      <link rel="stylesheet" type="text/css" href="prove5.css">
+      <script>
+
+      </script>
+   </head>
+
+   <body>
+      <header>
+         <h1>Nameless Shoe Store</h1>
+         <h2>Sign in</h2>
+      </header>
 
 <body>
 <div>

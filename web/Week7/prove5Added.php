@@ -85,9 +85,10 @@
    <body>
       <header>
          <h1>Nameless Shoe Store</h1>
-         <p>Welcome <?= $username?>, not you? Click </p>
-         <a href="signIn.php">here</a>
       </header>
+      <div align="right">
+         <p>Welcome <?= $username?>, not you? <a href="signIn.php">Click here</a></p>
+      </div>
       <h2>Add A New Product</h2>
       <br>
       <?php

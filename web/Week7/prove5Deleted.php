@@ -62,13 +62,14 @@
    <body>
       <header>
          <h1>Nameless Shoe Store</h1>
-         <p>Welcome <?= $username?>, not you? Click </p>
-         <a href="signIn.php">here</a>
       </header>
+      <div align="right">
+         <p>Welcome <?= $username?>, not you? <a href="signIn.php">Click here</a></p>
+      </div>
       <h2>Add A New Product</h2>
       <br>
       <?php
-         print "Item \"" . $item_name . "\" deleted by admin.";
+         print "Item \"" . $item_name . "\" deleted by " . $username . ".";
       ?>
       <br>
       <a href="prove5.php">Back to Browse</a>
