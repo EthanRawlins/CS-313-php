@@ -33,9 +33,10 @@
 <body>
 <div>
 
-<h1>Sign up for new account</h1>
+<h3>Sign up for new account</h3>
 
-<form id="mainForm" action="createAccount.php" method="POST">
+   <div align="center">
+      <form id="mainForm" action="createAccount.php" method="POST">
 
 	<input type="text" id="txtUser" name="txtUser" placeholder="Username">
 	<label for="txtUser">Username</label>
@@ -47,7 +48,8 @@
 
 	<input type="submit" value="Create Account" />
 
-</form>
+      </form>
+   </div>
 
 
 </div>

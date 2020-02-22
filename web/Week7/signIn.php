@@ -96,9 +96,10 @@ if ($badLogin)
 }
 ?>
 
-<h1>Please sign in below:</h1>
+   <h3 >Please sign in below:</h3>
 
-<form id="mainForm" action="signIn.php" method="POST">
+   <div align="center">
+      <form id="mainForm" action="signIn.php" method="POST">
 
 	<input type="text" id="txtUser" name="txtUser" placeholder="Username">
 	<label for="txtUser">Username</label>
@@ -110,7 +111,8 @@ if ($badLogin)
 
 	<input type="submit" value="Sign In" />
 
-</form>
+      </form>
+   </div>
 
 <br /><br />
 
