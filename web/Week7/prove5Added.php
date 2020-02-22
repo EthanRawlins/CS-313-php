@@ -94,7 +94,7 @@
          $query;
          $query = "SELECT item_name FROM item WHERE item_id = (SELECT last_value FROM item_item_id_seq)";
          foreach ($db->query($query) as $row){
-            print "Item \"" . $row[0] . "\" added by admin.";
+            print "Item \"" . $row[0] . "\" added by " . $username . ".";
          }
       ?>
       <br>
