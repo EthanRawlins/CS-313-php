@@ -117,8 +117,8 @@
       <header>
          <h1>Nameless Shoe Store</h1>
       </header>
-      <div>
-         <p>Welcome <?= $username?>, not you? Click </p><a href="signIn.php">here</a>
+      <div align="right">
+         <p>Welcome <?= $username?>, not you? Click <a href="signIn.php">here</a></p>
       </div>
       <br>
       <h2>All Products</h2>
