@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Math Submission Form</title>
+	<title>Postal Rate Calculator</title>
 </head>
 <body>
-	<h1>Math Submission Form</h1>
+	<h1>Postal Rate Calculator</h1>
 	<form action="/math" method="get">
+		Type: 
 		<select name="operation">
-			<option>Add</option>
-			<option>Subtract</option>
-			<option>Multiply</option>
-			<option>Divide</option>
+			<option>Stamped Letter</option>
+			<option>Metered Letter</option>
+			<option>Large Flat Envelope</option>
+			<option>First-Class Package Service-Retail</option>
 		</select>
-
+		Weight: 
 		<input type="text" name="operand1">
-		<input type="text" name="operand2">
 
 		<br><br>
 		<input type="submit" value="Get Result">

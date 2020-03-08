@@ -26,35 +26,182 @@ app.listen(port, function() {
  **********************************************************************/
 
 function handleMath(request, response) {
-	const operation = request.query.operation;
-	const operand1 = Number(request.query.operand1);
-	const operand2 = Number(request.query.operand2);
+	const mailType = request.query.operation;
+	const weight = Number(request.query.operand1);
 
 	// TODO: Here we should check to make sure we have all the correct parameters
 
-	computeOperation(response, operation, operand1, operand2);
+	computeOperation(response, mailType, weight);
 }
 
-function computeOperation(response, op, left, right) {
-	op = op.toLowerCase();
+function computeOperation(response, type, size) {
+	type = escape(type).toLowerCase();
 
 	let result = 0;
 
-	if (op == "add") {
-		result = left + right;
-	} else if (op == "subtract") {
-		result = left - right;		
-	} else if (op == "multiply") {
-		result = left * right;
-	} else if (op == "divide") {
-		result = left / right;
+	if (type == "stamped%20letter") {
+		if (size <= 1)
+		{
+			result = 0.55;
+		}
+		else if (size <= 2)
+		{
+			result = 0.70;
+		}
+		else if (size <= 3)
+		{
+			result = 0.85;
+		}
+		else if (size <= 3.5)
+		{
+			result = 1.00;
+		}
+		else if (size > 3.5)
+		{
+			result = "Too big for this mail type!";
+		}
+	} else if (type == "metered%20letter") {
+		if (size <= 1)
+		{
+			result = 0.50;
+		}
+		else if (size <= 2)
+		{
+			result = 0.65;
+		}
+		else if (size <= 3)
+		{
+			result = 0.80;
+		}
+		else if (size <= 3.5)
+		{
+			result = 0.95;
+		}
+		else if (size > 3.5)
+		{
+			result = "Too big for this mail type!";
+		}		
+	} else if (type == "large%20flat%20envelope") {
+		if (size <= 1)
+		{
+			result = 1.00;
+		}
+		else if (size <= 2)
+		{
+			result = 1.20;
+		}
+		else if (size <= 3)
+		{
+			result = 1.40;
+		}
+		else if (size <= 4)
+		{
+			result = 1.60;
+		}
+		else if (size <= 5)
+		{
+			result = 1.80;
+		}
+		else if (size <= 6)
+		{
+			result = 2.00;
+		}
+		else if (size <= 7)
+		{
+			result = 2.20;
+		}
+		else if (size <= 8)
+		{
+			result = 2.40;
+		}
+		else if (size <= 9)
+		{
+			result = 2.60;
+		}
+		else if (size <= 10)
+		{
+			result = 2.80;
+		}
+		else if (size <= 11)
+		{
+			result = 3.00;
+		}
+		else if (size <= 12)
+		{
+			result = 3.20;
+		}
+		else if (size <= 13)
+		{
+			result = 3.40;
+		}
+		else if (size > 13)
+		{
+			result = "Too big for this mail type!";
+		}
+	} else if (type == "first-class%20package%20service-retail") {
+		if (size <= 1)
+		{
+			result = 4.20;
+		}
+		else if (size <= 2)
+		{
+			result = 4.20;
+		}
+		else if (size <= 3)
+		{
+			result = 4.20;
+		}
+		else if (size <= 4)
+		{
+			result = 4.20;
+		}
+		else if (size <= 5)
+		{
+			result = 5.00;
+		}
+		else if (size <= 6)
+		{
+			result = 5.00;
+		}
+		else if (size <= 7)
+		{
+			result = 5.00;
+		}
+		else if (size <= 8)
+		{
+			result = 5.00;
+		}
+		else if (size <= 9)
+		{
+			result = 5.75;
+		}
+		else if (size <= 10)
+		{
+			result = 5.75;
+		}
+		else if (size <= 11)
+		{
+			result = 5.75;
+		}
+		else if (size <= 12)
+		{
+			result = 5.75;
+		}
+		else if (size <= 13)
+		{
+			result = 6.50;
+		}
+		else if (size > 13)
+		{
+			result = "Too big for this mail type!";
+		}
 	} else {
 		// It would be best here to redirect to an "unknown operation"
 		// error page or something similar.
 	}
 
 	// Set up a JSON object of the values we want to pass along to the EJS result page
-	const params = {operation: op, left: left, right: right, result: result};
+	const params = {mailType: type, weight: size, result: result};
 
 	// Render the response, using the EJS page "result.ejs" in the pages directory
 	// Makes sure to pass it the parameters we need.
