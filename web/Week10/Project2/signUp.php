@@ -17,7 +17,7 @@
 <html lang="en-us">
    <head>
       <meta charset="utf-8">
-      <title>Nameless Shoe Store</title>
+      <title>Nameless Video Store</title>
       <link rel="stylesheet" type="text/css" href="prove5.css">
       <script>
 

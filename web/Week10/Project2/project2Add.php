@@ -15,7 +15,7 @@
 <html lang="en-us">
    <head>
       <meta charset="utf-8">
-      <title>Nameless Shoe Store</title>
+      <title>Nameless Video Store</title>
       <link rel="stylesheet" type="text/css" href="project2.css">
       <script>
 
@@ -24,7 +24,7 @@
 
    <body>
       <header>
-         <h1>Nameless Shoe Store</h1>
+         <h1>Nameless Video Store</h1>
       </header>
       <div align="right">
          <p>Welcome <?= $username?>, not you? <a href="signIn.php">Click here</a></p>
