@@ -72,7 +72,7 @@
          print "Item \"" . $item_name . "\" deleted by " . $username . ".";
       ?>
       <br>
-      <a href="prove5.php">Back to Browse</a>
+      <a href="project2.php">Back to Browse</a>
       <br>
       <br>
       <form action="project2Deleted.php" method="POST">
