@@ -18,7 +18,7 @@ table {
       .button {
             margin: auto;
                text-align: center;
-                  background-color: darkred;
+                  background-color: darkblue;
                      color: white;
                         border: 1px solid black;
                            border-radius: 5px;
@@ -39,7 +39,7 @@ table {
             background-color: darkblue;
       }
       body {
-            background-color: grey;
+            background-color: aliceblue;
       }
       label {
             color: darkblue;
