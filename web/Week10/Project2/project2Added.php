@@ -89,7 +89,7 @@
       <div align="right">
          <p>Welcome <?= $username?>, not you? <a href="signIn.php">Click here</a></p>
       </div>
-      <h2>Add A New Product</h2>
+      <h2>Add A New Movie</h2>
       <br>
       <?php
          $query;
@@ -104,15 +104,13 @@
       <br>
       <form action="project2Added.php" method="POST">
          <div align="center">
-            <input name="item_type" type="text" placeholder="Item Type">
+            <input name="item_type" type="text" placeholder="Genre">
             <br>
-            <input name="item_price" type="text" placeholder="Item Price">
+            <input name="item_price" type="text" placeholder="Rating">
             <br>
-            <input name="item_brand" type="text" placeholder="Item Brand">
+            <input name="item_brand" type="text" placeholder="Title">
             <br>
-            <input name="item_name" type="text" placeholder="Item Name">
-            <br>
-            <input name="item_desc" type="text" placeholder="Item Description">
+            <input name="item_name" type="text" placeholder="Release Date (ex. 05/Mar/2020)">
             <br>
             <input type="submit" name="submit" value="Submit">
          </div>

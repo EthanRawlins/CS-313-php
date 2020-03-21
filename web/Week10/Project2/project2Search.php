@@ -135,26 +135,30 @@
             <h4>Filters</h4>
             Shoe Type: <br> 
             <input type="checkbox" name="type1" value="1">
-            <label for="type1">Basketball</label><br>
+            <label for="type1">Comedy</label><br>
             <input type="checkbox" name="type2" value="2">
-            <label for="type2">Running</label><br>
+            <label for="type2">Family</label><br>
             <input type="checkbox" name="type3" value="3">
-            <label for="type3">Soccer</label><br>
+            <label for="type3">Horror</label><br>
+            <input type="checkbox" name="type4" value="4">
+            <label for="type4">Action</label><br>
+            <input type="checkbox" name="type5" value="5">
+            <label for="type5">Drama</label><br>
             <input type="submit" name="filterSubmit" value="Filter">
          </div>
       </form>
       <br>
       <table>
          <tr>
-            <th>Price</th>
-            <th>Name</th>
-            <th>Brand</th>
-            <th>Description</th>
+               <th>Title</th>
+               <th>Genre</th>
+               <th>Rating</th>
+               <th>Price</th>
          </tr>
       <?php
          foreach ($db->query($query) as $row)
          {
-            print "<tr><td>$" . $row[2] . "</td><td>" . $row[4] . "</td><td>" . $row[3] . "</td><td>" . $row[5] . "</td></tr>";
+             print "<tr><td>" . $row[4] . "</td><td>" . $row[1] . "</td><td>" . $row[3] . "</td><td>$2.99</td></tr>";
          }
       ?>
       </table>

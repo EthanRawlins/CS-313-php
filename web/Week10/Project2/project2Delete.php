@@ -66,7 +66,7 @@
       <div align="right">
          <p>Welcome <?= $username?>, not you? <a href="signIn.php">Click here</a></p>
       </div>
-      <h2>Add A New Product</h2>
+      <h2>Delete A Movie</h2>
       <br>
       <a href="project2.php">Back to Browse</a>
       <br>

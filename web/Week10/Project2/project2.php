@@ -138,9 +138,13 @@
             <input type="checkbox" name="type1" value="1">
             <label for="type1">Comedy</label><br>
             <input type="checkbox" name="type2" value="2">
-            <label for="type2">Cartoon</label><br>
+            <label for="type2">Family</label><br>
             <input type="checkbox" name="type3" value="3">
             <label for="type3">Horror</label><br>
+            <input type="checkbox" name="type4" value="4">
+            <label for="type4">Action</label><br>
+            <input type="checkbox" name="type5" value="5">
+            <label for="type5">Drama</label><br>
             <input type="submit" name="filterSubmit" value="Filter">
          </div>
          <br>
