@@ -123,9 +123,9 @@
       <br>
       <h2>All Products</h2>
       <br>
-      <a href="project2Add.php">Add a new product</a>
+      <a href="project2Add.php">Add a new movie</a>
       <br>
-      <a href="project2Delete.php">Remove a product</a>
+      <a href="project2Delete.php">Remove a movie</a>
       <br>
       <form action="project2Search.php" method="POST">
          <div align="center">
@@ -134,27 +134,27 @@
          </div>
          <div align="left">
             <h4>Filters</h4>
-            Shoe Type: <br> 
+            Genre: <br> 
             <input type="checkbox" name="type1" value="1">
-            <label for="type1">Basketball</label><br>
+            <label for="type1">Comedy</label><br>
             <input type="checkbox" name="type2" value="2">
-            <label for="type2">Running</label><br>
+            <label for="type2">Cartoon</label><br>
             <input type="checkbox" name="type3" value="3">
-            <label for="type3">Soccer</label><br>
+            <label for="type3">Horror</label><br>
             <input type="submit" name="filterSubmit" value="Filter">
          </div>
          <br>
          <table>
             <tr>
-               <th>Price</th>
-               <th>Name</th>
+               <th>Title</th>
                <th>Brand</th>
                <th>Description</th>
+               <th>Price</th>
             </tr>
             <?php
                foreach ($db->query($query) as $row)
                {
-                  print "<tr><td>$" . $row[2] . "</td><td>" . $row[4] . "</td><td>" . $row[3] . "</td><td>" . $row[5] . "</td></tr>";
+                  print "<tr><td>$" . $row[1] . "</td><td>" . $row[2] . "</td><td>" . $row[3] . "</td><td>" . $row[5] . "</td></tr>";
                }
             ?>
          </table>
