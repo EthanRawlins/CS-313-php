@@ -27,7 +27,7 @@ table {
                                     font-size: 20px;
       }
       .button:hover {
-            background-color: #D11E1E;
+            background-color: blue;
                color: white;
                   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.15), 0 17px 50px 0 rgba(0,0,0,0.10);
       }
@@ -36,26 +36,26 @@ table {
                color: white;
       }
       header {
-            background-color: darkred;
+            background-color: darkblue;
       }
       body {
-            background-color: #F8F5E8;
+            background-color: grey;
       }
       label {
-            color: darkred;
+            color: darkblue;
       }
       p {
-            color: darkred;
+            color: darkblue;
       }
       h2 {
             color: white;
-               background-color: darkred;
+               background-color: darkblue;
                   width: 80%;
                      margin: auto;
                         text-align: center;
       }
       h3 {
-            color: darkred;
+            color: darkblue;
             margin: auto;
             text-align: center;
       }
