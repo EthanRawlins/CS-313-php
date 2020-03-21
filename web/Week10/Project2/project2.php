@@ -147,14 +147,14 @@
          <table>
             <tr>
                <th>Title</th>
-               <th>Brand</th>
-               <th>Description</th>
+               <th>Genre</th>
+               <th>Rating</th>
                <th>Price</th>
             </tr>
             <?php
                foreach ($db->query($query) as $row)
                {
-                  print "<tr><td>$" . $row[1] . "</td><td>" . $row[2] . "</td><td>" . $row[3] . "</td><td>" . $row[5] . "</td></tr>";
+                  print "<tr><td>" . $row[4] . "</td><td>" . $row[1] . "</td><td>" . $row[3] . "</td><td>$2.99</td></tr>";
                }
             ?>
          </table>
