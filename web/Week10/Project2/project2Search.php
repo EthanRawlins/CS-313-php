@@ -15,20 +15,20 @@
    
    if(isset($_POST["search"])){
       $search = $_POST["search"];
-      $query = "SELECT * FROM item WHERE UPPER(item_name) LIKE UPPER('%$search%')";
+      $query = "SELECT * FROM item WHERE UPPER(item_title) LIKE UPPER('%$search%')";
       if(isset($_POST["type1"])){
-         $query .= " AND item_type IN ('" . $_POST["type1"] . "'";
+         $query .= " AND item_genre IN ('" . $_POST["type1"] . "'";
          if(isset($_POST["type2"])){
-            $query .= ", " . $_POST["type2"];
+            $query .= ", '" . $_POST["type2"] . "'";
          }
          if(isset($_POST["type3"])){
-            $query .= ", " . $_POST["type3"];
+            $query .= ", '" . $_POST["type3"] . "'";
          }
          $query .= ")";
       }
 
       else if(isset($_POST["type2"])){
-         $query .= " AND item_type IN (" . $_POST["type2"];
+         $query .= " AND item_genre IN (" . $_POST["type2"];
          if(isset($_POST["type3"])){
             $query .= ", " . $_POST["type3"];
          }
@@ -36,13 +36,13 @@
       }
       else{
          if(isset($_POST["type3"])){
-            $query .= " AND item_type IN (" . $_POST["type3"] . ")";
+            $query .= " AND item_genre IN (" . $_POST["type3"] . ")";
          }
       }
    }
 
    else if(isset($_POST["type1"])){
-      $query = "SELECT * FROM item WHERE item_type IN (" . $_POST["type1"];
+      $query = "SELECT * FROM item WHERE item_genre IN (" . $_POST["type1"];
       if(isset($_POST["type2"])){
          $query .= ", " . $_POST["type2"];
       }
@@ -50,19 +50,19 @@
          $query .= ", " . $_POST["type3"];
       }
       else if(isset($_POST["type2"])){
-         $query .= "SELECT * FROM item WHERE item_type IN (" . $_POST["type2"];
+         $query .= "SELECT * FROM item WHERE item_genre IN (" . $_POST["type2"];
          if(isset($_POST["type3"])){
             $query .= ", " . $_POST["type3"];
          }
       }
       else if(isset($_POST["type3"])){
-         $query .= "SELECT * FROM item WHERE item_type IN (" . $_POST["type3"];
+         $query .= "SELECT * FROM item WHERE item_genre IN (" . $_POST["type3"];
       }
       $query .= ")";
    }
 
    else if(isset($_POST["type2"])){
-      $query = "SELECT * FROM item WHERE item_type IN (" . $_POST["type2"];
+      $query = "SELECT * FROM item WHERE item_genre IN (" . $_POST["type2"];
       if(isset($_POST["type3"])){
          $query .= ", " . $_POST["type3"];
       }
@@ -70,7 +70,7 @@
    }
 
    else if(isset($_POST["type3"])){
-      $query = "SELECT * FROM item WHERE item_type IN (" . $_POST["type3"] . ")";
+      $query = "SELECT * FROM item WHERE item_genre IN (" . $_POST["type3"] . ")";
    }
 
    else{
