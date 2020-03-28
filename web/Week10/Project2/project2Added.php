@@ -56,7 +56,7 @@
 
    //Inserts
    $itemInsert;
-   $itemInsert = "INSERT INTO item (item_id, item_genre, item_rating, item_title, item_release_date) VALUES (nextval('item_item_id_seq'), '$item_genre', '$item_rating', '$item_title', '$item_release_date')";
+   $itemInsert = "INSERT INTO item (item_id, item_barcode, item_genre, item_rating, item_title, item_release_date) VALUES (nextval('item_item_id_seq'), currval('item_item_id_seq'), '$item_genre', '$item_rating', '$item_title', '$item_release_date')";
 print($itemInsert);
    $stmt = $db->prepare($itemInsert);
    $stmt->execute();
