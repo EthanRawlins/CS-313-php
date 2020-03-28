@@ -10,24 +10,24 @@
       die(); // we always include a die after redirects.
    }
 
-   $item_type;
+   $item_genre;
    if(isset($_POST["item_genre"])){
-      $item_type = $_POST["item_genre"];
+      $item_genre = $_POST["item_genre"];
    }
  
-   $item_price;
+   $item_rating;
    if(isset($_POST["item_rating"])){
-      $item_price = $_POST["item_rating"];
+      $item_rating = $_POST["item_rating"];
    }
  
-   $item_brand;
+   $item_title;
    if(isset($_POST["item_title"])){
-      $item_brand = $_POST["item_title"];
+      $item_title = $_POST["item_title"];
    }
  
-   $item_name;
+   $item_release_date;
    if(isset($_POST["item_release_date"])){
-      $item_name = $_POST["item_release_date"];
+      $item_release_date = $_POST["item_release_date"];
    }
 
    $dbUrl = getenv('DATABASE_URL');
