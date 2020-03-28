@@ -57,7 +57,7 @@
    //Inserts
    $itemInsert;
    $itemInsert = "INSERT INTO item (item_id, item_genre, item_rating, item_title, item_release_date) VALUES (nextval('item_item_id_seq'), '$item_genre', '$item_rating', '$item_title', '$item_release_date')";
-
+print($itemInsert);
    $stmt = $db->prepare($itemInsert);
    $stmt->execute();
 
@@ -102,7 +102,7 @@
             <br>
             <input name="item_brand" type="text" placeholder="Title">
             <br>
-            <input name="item_name" type="text" placeholder="Release Date (ex. 05/Mar/2020)">
+            <input name="item_name" type="text" placeholder="Release Date (XX/Mon/XXXX)">
             <br>
             <input type="submit" name="submit" value="Submit">
          </div>

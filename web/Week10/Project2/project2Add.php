@@ -42,7 +42,7 @@
             <br>
             <input name="item_title" type="text" placeholder="Title">
             <br>
-            <input name="item_release_date" type="text" placeholder="Release Date (ex. 05/Mar/2020)">
+            <input name="item_release_date" type="text" placeholder="Release Date (XX/Mon/XXXX)">
             <br>
             <input type="submit" name="submit" value="Submit">
          </div>
