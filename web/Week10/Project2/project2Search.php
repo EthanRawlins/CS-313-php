@@ -24,61 +24,105 @@
          if(isset($_POST["type3"])){
             $query .= ", '" . $_POST["type3"] . "'";
          }
+         if(isset($_POST["type4"])){
+            $query .= ", '" . $_POST["type4"] . "'";
+         }
+         if(isset($_POST["type5"])){
+            $query .= ", '" . $_POST["type5"] . "'";
+         }         
          $query .= ")";
       }
 
       else if(isset($_POST["type2"])){
-         $query .= " AND item_genre IN (" . $_POST["type2"];
+         $query .= " AND item_genre IN ('" . $_POST["type2"] . "'";
          if(isset($_POST["type3"])){
-            $query .= ", " . $_POST["type3"];
+            $query .= ", '" . $_POST["type3"] . "'";
+         }
+         if(isset($_POST["type4"])){
+            $query .= ", '" . $_POST["type4"] . "'";
+         }
+         if(isset($_POST["type5"])){
+            $query .= ", '" . $_POST["type5"] . "'";
          }
          $query .= ")";
       }
-      else{
-         if(isset($_POST["type3"])){
-            $query .= " AND item_genre IN (" . $_POST["type3"] . ")";
+      else if(isset($_POST["type3"])){
+         $query .= " AND item_genre IN ('" . $_POST["type3"] . "'";
+         if(isset($_POST["type4"])){
+            $query .= ", '" . $_POST["type4"] . "'";
          }
+         if(isset($_POST["type5"])){
+            $query .= ", '" . $_POST["type5"] . "')";
+         }
+      }
+      else if(isset($_POST["type4"])){
+         $query .= " AND item_genre IN ('" . $_POST["type4"] . "'";
+         if(isset($_POST["type5"])){
+            $query .= ", '" . $_POST["type5"] . "')";
+         }
+      }
+      else if(isset($_POST["type5"])){
+         $query .= " AND item_genre IN ('" . $_POST["type5"] . "')";
       }
    }
 
    else if(isset($_POST["type1"])){
-      $query = "SELECT * FROM item WHERE item_genre IN (" . $_POST["type1"];
+      $query = "SELECT * FROM item WHERE item_genre IN ('" . $_POST["type1"] . "'";
       if(isset($_POST["type2"])){
-         $query .= ", " . $_POST["type2"];
+         $query .= ", '" . $_POST["type2"] . "'";
       }
       if(isset($_POST["type3"])){
-         $query .= ", " . $_POST["type3"];
+         $query .= ", '" . $_POST["type3"] . "'";
       }
-      else if(isset($_POST["type2"])){
-         $query .= "SELECT * FROM item WHERE item_genre IN (" . $_POST["type2"];
-         if(isset($_POST["type3"])){
-            $query .= ", " . $_POST["type3"];
-         }
+      if(isset($_POST["type4"])){
+         $query .= ", '" . $_POST["type4"] . "'";
       }
-      else if(isset($_POST["type3"])){
-         $query .= "SELECT * FROM item WHERE item_genre IN (" . $_POST["type3"];
+      if(isset($_POST["type5"])){
+         $query .= ", '" . $_POST["type5"] . "'";
       }
       $query .= ")";
    }
 
    else if(isset($_POST["type2"])){
-      $query = "SELECT * FROM item WHERE item_genre IN (" . $_POST["type2"];
+      $query = "SELECT * FROM item WHERE item_genre IN ('" . $_POST["type2"] . "'";
       if(isset($_POST["type3"])){
-         $query .= ", " . $_POST["type3"];
+         $query .= ", '" . $_POST["type3"] . "'";
+      }
+      if(isset($_POST["type4"])){
+         $query .= ", '" . $_POST["type4"] . "'";
+      }
+      if(isset($_POST["type5"])){
+         $query .= ", '" . $_POST["type5"] . "'";
       }
       $query .= ")";
    }
 
    else if(isset($_POST["type3"])){
-      $query = "SELECT * FROM item WHERE item_genre IN (" . $_POST["type3"] . ")";
+      $query = "SELECT * FROM item WHERE item_genre IN ('" . $_POST["type3"] . "'";
+      if(isset($_POST["type4"])){
+         $query .= ", '" . $_POST["type4"] . "'";
+      }
+      if(isset($_POST["type5"])){
+         $query .= ", '" . $_POST["type5"] . "'";
+      }
+      $query .= ")";
+   }
+
+   else if(isset($_POST["type4"])){
+      $query = "SELECT * FROM item WHERE item_genre IN ('" . $_POST["type4"] . "'";
+      if(isset($_POST["type5"])){
+         $query .= ", '" . $_POST["type5"] . "'";
+      }
+      $query .= ")";
+   }
+
+   else if(isset($_POST["type5"])){
+      $query = "SELECT * FROM item WHERE item_genre IN ('" . $_POST["type5"] . "')";
    }
 
    else{
       $query = "SELECT * FROM item";
    }
-
-print($search);
-print($query);
 
    $dbUrl = getenv('DATABASE_URL');
 
