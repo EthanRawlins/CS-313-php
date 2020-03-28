@@ -42,7 +42,7 @@
    //Inserts
    $itemDelete;
    $itemDelete = "DELETE FROM item WHERE UPPER(item_name) LIKE UPPER ('$item_name')";
-
+print($itemDelete);
    $stmt = $db->prepare($itemDelete);
    $stmt->execute();
 
