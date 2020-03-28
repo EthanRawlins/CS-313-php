@@ -11,32 +11,24 @@
    }
 
    $item_type;
-   if(isset($_POST["item_type"])){
-      $item_type = $_POST["item_type"];
+   if(isset($_POST["item_genre"])){
+      $item_type = $_POST["item_genre"];
    }
  
    $item_price;
-   if(isset($_POST["item_price"])){
-      $item_price = $_POST["item_price"];
+   if(isset($_POST["item_rating"])){
+      $item_price = $_POST["item_rating"];
    }
  
    $item_brand;
-   if(isset($_POST["item_brand"])){
-      $item_brand = $_POST["item_brand"];
+   if(isset($_POST["item_title"])){
+      $item_brand = $_POST["item_title"];
    }
  
    $item_name;
-   if(isset($_POST["item_name"])){
-      $item_name = $_POST["item_name"];
+   if(isset($_POST["item_release_date"])){
+      $item_name = $_POST["item_release_date"];
    }
- 
-   $item_desc;
-   if(isset($_POST["item_desc"])){
-      $item_desc = $_POST["item_desc"];
-   }
- 
-   $added_by;
-   $added_by = 1;
 
    $dbUrl = getenv('DATABASE_URL');
 
@@ -64,7 +56,7 @@
 
    //Inserts
    $itemInsert;
-   $itemInsert = "INSERT INTO item (item_id, item_type, item_price, item_brand, item_name, item_desc, added_by) VALUES (nextval('item_item_id_seq'), '$item_type', '$item_price', '$item_brand', '$item_name', '$item_desc', '$added_by')";
+   $itemInsert = "INSERT INTO item (item_id, item_genre, item_rating, item_title, item_release_date) VALUES (nextval('item_item_id_seq'), '$item_genre', '$item_rating', '$item_title', '$item_release_date')";
 
    $stmt = $db->prepare($itemInsert);
    $stmt->execute();

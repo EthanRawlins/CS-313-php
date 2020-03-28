@@ -36,13 +36,13 @@
       <br>
       <form action="project2Added.php" method="POST">
          <div align="center">
-            <input name="item_type" type="text" placeholder="Genre">
+            <input name="item_genre" type="text" placeholder="Genre">
             <br>
-            <input name="item_price" type="text" placeholder="Rating">
+            <input name="item_rating" type="text" placeholder="Rating">
             <br>
-            <input name="item_brand" type="text" placeholder="Title">
+            <input name="item_title" type="text" placeholder="Title">
             <br>
-            <input name="item_name" type="text" placeholder="Release Date (ex. 05/Mar/2020)">
+            <input name="item_release_date" type="text" placeholder="Release Date (ex. 05/Mar/2020)">
             <br>
             <input type="submit" name="submit" value="Submit">
          </div>
