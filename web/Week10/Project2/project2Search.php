@@ -52,14 +52,16 @@
             $query .= ", '" . $_POST["type4"] . "'";
          }
          if(isset($_POST["type5"])){
-            $query .= ", '" . $_POST["type5"] . "')";
+            $query .= ", '" . $_POST["type5"] . "'";
          }
+         $query .= ")";
       }
       else if(isset($_POST["type4"])){
          $query .= " AND item_genre IN ('" . $_POST["type4"] . "'";
          if(isset($_POST["type5"])){
-            $query .= ", '" . $_POST["type5"] . "')";
+            $query .= ", '" . $_POST["type5"] . "'";
          }
+         $query .= ")";
       }
       else if(isset($_POST["type5"])){
          $query .= " AND item_genre IN ('" . $_POST["type5"] . "')";
