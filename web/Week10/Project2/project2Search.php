@@ -124,6 +124,8 @@
       $query = "SELECT * FROM item";
    }
 
+print($query);
+
    $dbUrl = getenv('DATABASE_URL');
 
    if (empty($dbUrl)) {
