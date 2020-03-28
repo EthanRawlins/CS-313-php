@@ -66,7 +66,8 @@
       }
    }
 
-   else if(isset($_POST["type1"])){
+   else{
+      if(isset($_POST["type1"])){
       $query = "SELECT * FROM item WHERE item_genre IN ('" . $_POST["type1"] . "'";
       if(isset($_POST["type2"])){
          $query .= ", '" . $_POST["type2"] . "'";
@@ -123,7 +124,7 @@
    else{
       $query = "SELECT * FROM item";
    }
-
+}
 print($query);
 
    $dbUrl = getenv('DATABASE_URL');
