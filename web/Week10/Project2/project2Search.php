@@ -77,6 +77,9 @@
       $query = "SELECT * FROM item";
    }
 
+print($search);
+print($query);
+
    $dbUrl = getenv('DATABASE_URL');
 
    if (empty($dbUrl)) {
