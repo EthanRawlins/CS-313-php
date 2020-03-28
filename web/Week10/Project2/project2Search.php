@@ -134,15 +134,15 @@
          <div align="left">
             <h4>Filters</h4>
             Shoe Type: <br> 
-            <input type="checkbox" name="type1" value="1">
+            <input type="checkbox" name="type1" value="Comedy">
             <label for="type1">Comedy</label><br>
-            <input type="checkbox" name="type2" value="2">
+            <input type="checkbox" name="type2" value="Family">
             <label for="type2">Family</label><br>
-            <input type="checkbox" name="type3" value="3">
+            <input type="checkbox" name="type3" value="Horror">
             <label for="type3">Horror</label><br>
-            <input type="checkbox" name="type4" value="4">
+            <input type="checkbox" name="type4" value="Action">
             <label for="type4">Action</label><br>
-            <input type="checkbox" name="type5" value="5">
+            <input type="checkbox" name="type5" value="Drama">
             <label for="type5">Drama</label><br>
             <input type="submit" name="filterSubmit" value="Filter">
          </div>
