@@ -10,9 +10,9 @@
       die(); // we always include a die after redirects.
    }
 
-   $item_name;
-   if(isset($_POST["item_name"])){
-      $item_name = $_POST["item_name"];
+   $item_title;
+   if(isset($_POST["item_title"])){
+      $item_title = $_POST["item_title"];
    }
  
       $dbUrl = getenv('DATABASE_URL');
@@ -69,7 +69,7 @@
       <h2>Delete A Movie</h2>
       <br>
       <?php
-         print "Item \"" . $item_name . "\" deleted by " . $username . ".";
+         print "Movie \"" . $item_title . "\" deleted by " . $username . ".";
       ?>
       <br>
       <a href="project2.php">Back to Browse</a>
@@ -77,7 +77,7 @@
       <br>
       <form action="project2Deleted.php" method="POST">
          <div align="center">
-           <input name="item_name" type="text" placeholder="Item Name">
+           <input name="item_title" type="text" placeholder="Item Title">
            <input type="submit" name="delete" value="Delete">
          </div>
       </form>

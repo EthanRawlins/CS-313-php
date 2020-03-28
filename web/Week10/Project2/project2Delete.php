@@ -41,7 +41,7 @@
 
    //Inserts
    $itemDelete;
-   $itemDelete = "DELETE FROM item WHERE UPPER(item_name) LIKE UPPER ('$item_name')";
+   $itemDelete = "DELETE FROM item WHERE UPPER(item_title) LIKE UPPER ('$item_title')";
 
    $stmt = $db->prepare($itemDelete);
    $stmt->execute();
@@ -73,7 +73,7 @@
       <br>
       <form action="project2Deleted.php" method="POST">
          <div align="center">
-           <input name="item_name" type="text" placeholder="Item Name">
+           <input name="item_title" type="text" placeholder="Movie Title">
            <input type="submit" name="delete" value="Delete">
          </div>
       </form>
