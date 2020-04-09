@@ -82,7 +82,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 
    <body>
       <header>
-         <h1>Nameless Shoe Store</h1>
+         <h1>Nameless Video Store</h1>
          <br>
          <h2>Sign in</h2>
          <br>
